@@ -1,6 +1,6 @@
 import ContactItem from "./ContactItem";
 
-function ContactsList({ contacts }) {
+function ContactsList({ contacts, deleteHandler }) {
   return (
     <div>
       <h3>Contacts List</h3>
@@ -10,6 +10,7 @@ function ContactsList({ contacts }) {
             <ContactItem
               key={contact.id}
               data={contact}
+              deleteHandler={deleteHandler}
             ></ContactItem>
           ))}
         </ul>
