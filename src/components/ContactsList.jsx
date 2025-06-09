@@ -1,3 +1,5 @@
+import ContactItem from "./ContactItem";
+
 function ContactsList({ contacts }) {
   return (
     <div>
@@ -5,18 +7,10 @@ function ContactsList({ contacts }) {
       {contacts.length ? (
         <ul>
           {contacts.map((contact) => (
-            <li key={contact.id}>
-              <p>{contact.name}</p>
-              <p>
-                <span>📬</span>
-                {contact.email}
-              </p>
-              <p>
-                <span>📞</span>
-                {contact.phoneNumber}
-              </p>
-              <button>🗑</button>
-            </li>
+            <ContactItem
+              key={contact.id}
+              data={contact}
+            ></ContactItem>
           ))}
         </ul>
       ) : (
