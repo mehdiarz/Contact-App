@@ -1,6 +1,8 @@
+import styles from "./ContactItem.module.css"
+
 function ContactItem({data :{id, name, email, phoneNumber, }, deleteHandler}) {
   return (
-    <li key={id}>
+    <li className={styles.item}>
       <p>{name}</p>
       <p>
         <span>📬</span>
